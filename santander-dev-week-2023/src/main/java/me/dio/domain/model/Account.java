@@ -9,7 +9,7 @@ public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(unique = true)
     private String number;
@@ -22,14 +22,11 @@ public class Account {
     @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
-
-
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -63,10 +60,6 @@ public class Account {
 
     public void setLimit(BigDecimal limit) {
         this.limit = limit;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
 }
